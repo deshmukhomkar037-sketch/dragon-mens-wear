@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragon Mens Wear | Premium Men's Fashion</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Rajdhani:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- CURSOR ELEMENTS -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- PARTICLES BACKGROUND -->
+<div id="particles-bg"></div>
+
+<!-- SIDEBAR OVERLAY -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeCart()"></div>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="dragonGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ff6a00"/>
+          <stop offset="100%" stop-color="#ff2d00"/>
+        </radialGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <g filter="url(#glow)" fill="url(#dragonGrad)">
+        <ellipse cx="65" cy="25" rx="18" ry="13"/>
+        <circle cx="72" cy="21" r="3" fill="#d4a017"/>
+        <circle cx="73" cy="20" r="1.5" fill="#fff"/>
+        <polygon points="80,25 90,23 88,29 80,28"/>
+        <circle cx="87" cy="24" r="2" fill="#ffd700" opacity="0.9"/>
+        <polygon points="62,15 58,5 66,13" fill="#cc3300"/>
+        <polygon points="50,30 25,10 30,40 50,40" opacity="0.9"/>
+        <polygon points="50,35 20,25 28,45 50,42" opacity="0.6"/>
+        <ellipse cx="45" cy="50" rx="22" ry="18"/>
+        <path d="M33,42 Q40,38 47,42 Q40,46 33,42Z" fill="#cc3300" opacity="0.6"/>
+        <path d="M38,52 Q45,48 52,52 Q45,56 38,52Z" fill="#cc3300" opacity="0.6"/>
+        <path d="M30,60 Q15,70 10,85 Q20,80 25,75 Q30,80 35,72 Q35,65 30,60Z"/>
+        <path d="M50,60 Q55,70 52,80 Q48,85 44,80 Q46,72 42,62Z"/>
+        <polygon points="44,80 40,87 43,88 46,82"/>
+        <polygon points="48,82 45,89 48,89 50,83"/>
+        <path d="M28,58 Q22,68 20,78 Q25,74 28,70 Q31,74 32,68Z"/>
+      </g>
+      <g opacity="0.8">
+        <ellipse cx="93" cy="23" rx="6" ry="3" fill="#ffd700" opacity="0.9"/>
+        <ellipse cx="97" cy="22" rx="3" ry="2" fill="#ff6600" opacity="0.7"/>
+      </g>
+    </svg>
+    <div class="nav-brand">
+      Dragon
+      <span>Mens Wear</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#sale">Sale</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="openCart()">
+      🛒 Cart
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">New Collection 2025</div>
+    <h1 class="hero-title">
+      <span class="line1">WEAR THE</span>
+      <span class="line2">DRAGON</span>
+      <span class="line3">Premium Mens Fashion</span>
+    </h1>
+    <p class="hero-desc">Unleash your inner strength with our exclusive collection of premium menswear. Bold designs, premium fabrics, legendary style.</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn-primary">🔥 Shop Now</a>
+      <a href="#categories" class="btn-secondary">View Collections</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="model-showcase">
+      <div class="model-glow"></div>
+      <div class="hero-model-fig">
+        <svg class="model-svg" viewBox="0 0 420 580" xmlns="http://www.w3.org/2000/svg">
+          <!-- SVG content (same as before) -->
+          <defs>
+            <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#c8956c"/>
+              <stop offset="100%" stop-color="#a0714f"/>
+            </linearGradient>
+            <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1a0800"/>
+              <stop offset="50%" stop-color="#2d0e00"/>
+              <stop offset="100%" stop-color="#1a0800"/>
+            </linearGradient>
+            <linearGradient id="pantsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0a0a1a"/>
+              <stop offset="100%" stop-color="#161628"/>
+            </linearGradient>
+            <linearGradient id="fireAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ff4500"/>
+              <stop offset="100%" stop-color="#ffd700"/>
+            </linearGradient>
+            <filter id="modelShadow">
+              <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#ff4500" flood-opacity="0.3"/>
+            </filter>
+          </defs>
+          <ellipse cx="210" cy="565" rx="80" ry="12" fill="rgba(255,69,0,0.2)"/>
+          <rect x="155" y="525" width="55" height="28" rx="8" fill="#1a1a1a"/>
+          <rect x="155" y="525" width="55" height="10" rx="5" fill="#222"/>
+          <rect x="210" y="525" width="55" height="28" rx="8" fill="#1a1a1a"/>
+          <rect x="210" y="525" width="55" height="10" rx="5" fill="#222"/>
+          <line x1="163" y1="532" x2="200" y2="532" stroke="#ff4500" stroke-width="2" stroke-dasharray="5,3"/>
+          <line x1="218" y1="532" x2="255" y2="532" stroke="#ff4500" stroke-width="2" stroke-dasharray="5,3"/>
+          <path d="M160,380 L175,525 L215,525 L210,395Z" fill="url(#pantsGrad)"/>
+          <path d="M260,380 L245,525 L205,525 L210,395Z" fill="url(#pantsGrad)"/>
+          <line x1="190" y1="390" x2="185" y2="510" stroke="rgba(255,69,0,0.3)" stroke-width="1"/>
+          <line x1="230" y1="390" x2="235" y2="510" stroke="rgba(255,69,0,0.3)" stroke-width="1"/>
+          <rect x="155" y="375" width="110" height="15" rx="4" fill="#2a1500"/>
+          <rect x="200" y="377" width="22" height="11" rx="3" fill="#d4a017"/>
+          <text x="203" y="386" fill="#0a0a0f" font-size="8" font-weight="bold">D</text>
+          <path d="M140,200 L130,380 L290,380 L280,200Z" fill="url(#shirtGrad)" filter="url(#modelShadow)"/>
+          <g transform="translate(180,260) scale(0.5)" opacity="0.7">
+            <ellipse cx="65" cy="25" rx="18" ry="13" fill="url(#fireAccent)"/>
+            <polygon points="80,25 90,23 88,29 80,28" fill="url(#fireAccent)"/>
+            <polygon points="62,15 58,5 66,13" fill="#cc3300"/>
+            <polygon points="50,30 25,10 30,40 50,40" fill="#ff6a00" opacity="0.9"/>
+            <ellipse cx="45" cy="50" rx="22" ry="18" fill="url(#fireAccent)"/>
+            <path d="M30,60 Q15,70 10,85 Q20,80 25,75 Q30,80 35,72 Q35,65 30,60Z" fill="url(#fireAccent)"/>
+          </g>
+          <path d="M200,200 L205,380 L215,380 L210,200Z" fill="url(#fireAccent)" opacity="0.5"/>
+          <path d="M175,200 L210,230 L245,200 L255,200 L210,240 L165,200Z" fill="#ff4500" opacity="0.3"/>
+          <path d="M140,200 L110,310 L130,315 L155,220Z" fill="url(#shirtGrad)"/>
+          <path d="M110,310 L100,360 L120,360 L130,315Z" fill="url(#skinGrad)"/>
+          <ellipse cx="107" cy="365" rx="12" ry="10" fill="url(#skinGrad)"/>
+          <path d="M280,200 L310,310 L290,315 L265,220Z" fill="url(#shirtGrad)"/>
+          <path d="M310,310 L320,360 L300,360 L290,315Z" fill="url(#skinGrad)"/>
+          <ellipse cx="313" cy="365" rx="12" ry="10" fill="url(#skinGrad)"/>
+          <rect x="195" y="160" width="30" height="45" rx="8" fill="url(#skinGrad)"/>
+          <ellipse cx="210" cy="130" rx="55" ry="65" fill="url(#skinGrad)"/>
+          <path d="M155,105 Q160,60 210,55 Q260,60 265,105 Q240,85 210,82 Q180,85 155,105Z" fill="#1a0a00"/>
+          <path d="M155,105 Q162,80 185,75 Q175,95 165,115Z" fill="#0f0600"/>
+          <ellipse cx="188" cy="125" rx="10" ry="8" fill="white"/>
+          <ellipse cx="232" cy="125" rx="10" ry="8" fill="white"/>
+          <circle cx="190" cy="126" r="5" fill="#2a1500"/>
+          <circle cx="234" cy="126" r="5" fill="#2a1500"/>
+          <circle cx="191" cy="124" r="2" fill="white"/>
+          <circle cx="235" cy="124" r="2" fill="white"/>
+          <path d="M178,115 Q188,110 200,113" stroke="#1a0a00" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M220,113 Q232,110 242,115" stroke="#1a0a00" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M205,130 Q208,145 215,148 Q212,150 210,148 Q207,148 205,145Z" fill="#b07850" opacity="0.7"/>
+          <path d="M196,158 Q210,165 224,158" stroke="#c87050" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M199,158 Q210,162 221,158" stroke="#a05030" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <ellipse cx="155" cy="135" rx="10" ry="14" fill="url(#skinGrad)"/>
+          <ellipse cx="265" cy="135" rx="10" ry="14" fill="url(#skinGrad)"/>
+          <path d="M168,175 Q210,200 252,175 Q245,190 210,195 Q175,190 168,175Z" fill="#1a0a00" opacity="0.25"/>
+          <path d="M185,195 L210,220 L235,195" stroke="#ff4500" stroke-width="2" fill="none" opacity="0.5"/>
+          <ellipse cx="210" cy="290" rx="160" ry="200" fill="url(#fireAccent)" opacity="0.03"/>
+        </svg>
+        <div class="floating-tag tag-fire">🔥 Dragon Collection</div>
+        <div class="floating-tag tag-gold">⭐ Premium Quality</div>
+        <div class="floating-tag tag-white">📦 Free Delivery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-num">5000+</span>
+    <span class="stat-label">Happy Customers</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">200+</span>
+    <span class="stat-label">Products</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">50+</span>
+    <span class="stat-label">Brands</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">4.9★</span>
+    <span class="stat-label">Average Rating</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">FREE</span>
+    <span class="stat-label">Shipping ₹999+</span>
+  </div>
+</div>
+
+<div class="fire-divider"></div>
+
+<!-- CATEGORIES SECTION -->
+<section class="section" id="categories">
+  <div class="section-head reveal">
+    <span class="section-tag">Shop By</span>
+    <h2 class="section-title">OUR <span>COLLECTIONS</span></h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="categories-grid">
+    <div class="cat-card cat-c1 reveal reveal-delay-1" onclick="filterProducts('Shirts', this)">
+      <div class="cat-bg"><img src="https://images.unsplash.com/photo-1602810319428-019690571b5b" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="cat-overlay"></div>
+      <div class="cat-info">
+        <span class="cat-name">SHIRTS</span>
+        <span class="cat-count">42 Products</span>
+      </div>
+      <div class="cat-arrow">→</div>
+    </div>
+    <div class="cat-card cat-c2 reveal reveal-delay-2" onclick="filterProducts('Jackets', this)">
+      <div class="cat-bg"><img src="https://images.unsplash.com/photo-1520975661595-6453be3f7070" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="cat-overlay"></div>
+      <div class="cat-info">
+        <span class="cat-name">JACKETS</span>
+        <span class="cat-count">28 Products</span>
+      </div>
+      <div class="cat-arrow">→</div>
+    </div>
+    <div class="cat-card cat-c3 reveal reveal-delay-3" onclick="filterProducts('Pants', this)">
+      <div class="cat-bg"><img src="https://images.unsplash.com/photo-1582552938357-32b906df40cb" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="cat-overlay"></div>
+      <div class="cat-info">
+        <span class="cat-name">PANTS & JEANS</span>
+        <span class="cat-count">35 Products</span>
+      </div>
+      <div class="cat-arrow">→</div>
+    </div>
+    <div class="cat-card cat-c4 reveal reveal-delay-4" onclick="filterProducts('Ethnic', this)">
+      <div class="cat-bg">🥷</div>
+      <div class="cat-overlay"></div>
+      <div class="cat-info">
+        <span class="cat-name">ETHNIC WEAR</span>
+        <span class="cat-count">19 Products</span>
+      </div>
+      <div class="cat-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<div class="fire-divider"></div>
+
+<!-- PRODUCTS SECTION -->
+<section class="section" id="products">
+  <div class="section-head reveal">
+    <span class="section-tag">Featured</span>
+    <h2 class="section-title">HOT <span>PRODUCTS</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div style="display:flex;gap:12px;margin-bottom:40px;flex-wrap:wrap;justify-content:center;" class="reveal">
+    <button class="size-btn active" onclick="filterProducts('All',this)">ALL</button>
+    <button class="size-btn" onclick="filterProducts('Shirts',this)">SHIRTS</button>
+    <button class="size-btn" onclick="filterProducts('Jackets',this)">JACKETS</button>
+    <button class="size-btn" onclick="filterProducts('Pants',this)">PANTS</button>
+    <button class="size-btn" onclick="filterProducts('Ethnic',this)">ETHNIC</button>
+    <button class="size-btn" onclick="filterProducts('Casual',this)">CASUAL</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<!-- PROMO BANNER -->
+<div class="promo-banner" id="sale">
+  <div class="promo-dragon-bg">🐉</div>
+  <div class="promo-text">
+    <p class="promo-sub">🔥 Dragon Fire Sale — Limited Time</p>
+    <h2 class="promo-title">FLAT <span>50% OFF</span><br>ON JACKETS</h2>
+    <p class="promo-desc">Unleash the deal! Premium quality jackets at half the price. Offer valid till stock lasts.</p>
+    <br>
+    <a href="#" class="btn-primary" style="display:inline-flex;margin-top:20px;">Claim Offer 🔥</a>
+  </div>
+  <div class="promo-actions">
+    <div class="promo-percent">50%</div>
+    <span class="promo-off">OFF TODAY</span>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-brand">Dragon<br><small style="font-size:0.5rem;letter-spacing:6px;color:var(--text2)">Mens Wear</small></span>
+      <p class="footer-desc">Premium menswear with fierce style. Born from fire, crafted for legends. Wear the dragon, own the street.</p>
+      <div class="footer-social">
+        <div class="social-btn">📘</div>
+        <div class="social-btn">📸</div>
+        <div class="social-btn">🐦</div>
+        <div class="social-btn">▶️</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">New Arrivals</a></li>
+        <li><a href="#">Sale</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Collections</h4>
+      <ul class="footer-links">
+        <li><a href="#">Formal Shirts</a></li>
+        <li><a href="#">Casual Shirts</a></li>
+        <li><a href="#">Jackets</a></li>
+        <li><a href="#">Denim Pants</a></li>
+        <li><a href="#">Ethnic Wear</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul class="footer-links">
+        <li><a href="#">📍 Nagpur, Maharashtra</a></li>
+        <li><a href="#">📞 +91 98765 43210</a></li>
+        <li><a href="#">📧 hello@dragonmens.in</a></li>
+        <li><a href="#">🕐 Mon-Sat: 10AM-8PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Dragon Mens Wear. Made with <span class="footer-fire">🔥</span> in Nagpur, India.</span>
+    <span class="footer-copy">Privacy Policy | Terms of Service</span>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="productModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-grid">
+      <div class="modal-img" id="modalImg"></div>
+      <div>
+        <p id="modalCat" style="font-size:0.75rem;letter-spacing:3px;color:var(--fire2);margin-bottom:10px;text-transform:uppercase;"></p>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-price" id="modalPrice"></div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <p class="modal-label">Size</p>
+        <div class="size-row" id="modalSizes"></div>
+        <p class="modal-label">Quantity</p>
+        <div class="qty-wrap">
+          <button class="qty-btn" onclick="changeQty(-1)">−</button>
+          <span class="qty-num" id="modalQty">1</span>
+          <button class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+        <div class="modal-btns">
+          <button class="add-cart" id="modalCartBtn" onclick="addToCartFromModal()" style="clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);">🛒 Add to Cart</button>
+          <button class="buy-now" onclick="buyNow()">⚡ Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART SIDEBAR -->
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <span class="cart-title">🛒 YOUR CART</span>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <span class="cart-empty-icon">🛒</span>
+      <p class="cart-empty-text">Your cart is empty.<br>Add some fire! 🔥</p>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total Amount</span>
+      <span class="cart-total-amt" id="cartTotal">₹0</span>
+    </div>
+    <button class="checkout-btn" onclick="checkout()">⚡ Proceed to Checkout</button>
+  </div>
+</div>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
